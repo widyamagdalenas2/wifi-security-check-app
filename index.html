@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>WiFi Security Scanner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🔐 WiFi Security Scanner</h1>
+
+    <div class="buttons">
+        <button onclick="scanWifi()">Scan WiFi</button>
+        <button onclick="scanWifi()">Scan Ulang</button>
+    </div>
+
+    <h2 id="wifiName">WiFi: -</h2>
+
+    <div class="score-wrapper">
+        <div class="score-circle" id="scoreCircle">
+            <span id="score">0</span>
+        </div>
+        <p id="finalStatus">Status: -</p>
+    </div>
+
+    <h3>Hasil Pemeriksaan</h3>
+
+    <!-- MENU HASIL -->
+    <div class="menu" onclick="toggle('ssl')">🔒 SSL Interception</div>
+    <div id="ssl" class="detail"></div>
+
+    <div class="menu" onclick="toggle('captive')">🌐 Captive Portal</div>
+    <div id="captive" class="detail"></div>
+
+    <div class="menu" onclick="toggle('dns')">📡 DNS Hijacking</div>
+    <div id="dns" class="detail"></div>
+
+    <div class="menu" onclick="toggle('gateway')">🚪 Gateway & IP Check</div>
+    <div id="gateway" class="detail"></div>
+
+    <div class="menu" onclick="toggle('evil')">🕵️ Evil Twin</div>
+    <div id="evil" class="detail"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
